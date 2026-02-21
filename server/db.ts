@@ -5,22 +5,29 @@ let dbInstance: any = null;
 async function createDatabaseConnection() {
   if (dbInstance) return dbInstance;
   
-  if (process.env.NODE_ENV === "production" && process.env.DATABASE_URL?.startsWith("postgres")) {
+  // Force PostgreSQL in production or when DATABASE_URL is postgres
+  if (process.env.NODE_ENV === "production" || process.env.DATABASE_URL?.startsWith("postgres")) {
     // Production: Use PostgreSQL
     try {
       const { drizzle } = await import("drizzle-orm/node-postgres");
       const { Pool } = await import("pg");
       const schema = await import("@shared/schema-pg");
       
+      // Require valid DATABASE_URL in production
+      const connectionString = process.env.DATABASE_URL;
+      if (!connectionString || connectionString === "postgresql://placeholder") {
+        throw new Error("DATABASE_URL environment variable is required for PostgreSQL connection in production");
+      }
+      
       const pool = new Pool({
-        connectionString: process.env.DATABASE_URL,
-        ssl: { rejectUnauthorized: false }
+        connectionString,
+        ssl: connectionString.includes("localhost") ? false : { rejectUnauthorized: false }
       });
       
       dbInstance = drizzle(pool, { schema });
     } catch (error) {
       console.error("Failed to connect to PostgreSQL:", error);
-      throw error;
+      throw new Error("PostgreSQL connection required in production. Please set DATABASE_URL environment variable.");
     }
   } else {
     // Development: Use SQLite

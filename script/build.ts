@@ -45,7 +45,8 @@ async function buildAll() {
     ...Object.keys(pkg.devDependencies || {}),
     ...Object.keys(pkg.optionalDependencies || {}),
   ];
-  const externals = allDeps.filter((dep) => !allowlist.includes(dep));
+  // Always exclude better-sqlite3 from production builds
+  const externals = allDeps.filter((dep) => !allowlist.includes(dep) || dep === "better-sqlite3");
 
   await esbuild({
     entryPoints: ["server/index.ts"],
