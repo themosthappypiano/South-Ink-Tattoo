@@ -1,0 +1,337 @@
+✅ SIN — Final Phase 1 Confirmation
+🎯 Goal
+
+Convert traffic into booked sessions using an embedded calendar system (with deposit capability recommended).
+
+📄 Site Structure (Multi-Page)
+
+Home
+
+Artists (Individual profile pages for each artist)
+
+Gallery (Includes Instagram integration)
+
+Services (Style-based + size-based breakdown)
+
+Book a Session (Embedded calendar booking system)
+
+Contact
+
+🧩 Booking System
+
+Embedded live calendar
+
+Client selects artist → selects time → submits details → pays deposit
+
+Clean. No back-and-forth friction.
+
+👤 Artists Page
+
+Overview grid of all artists
+
+Click → Individual profile page
+
+Bio
+
+Style specialty
+
+Portfolio preview
+
+Direct “Book with [Artist Name]” CTA
+
+🖼 Gallery
+
+High-contrast tattoo photography
+
+Instagram feed embedded
+
+Filter by:
+
+Artist
+
+Style
+
+Size
+
+Everything is aligned.
+
+Now we move to Phase 2: Copy, Layout & Style Blueprint (For Your Approval).
+
+This will be bold, minimal, aggressive — built to convert.
+
+🔥 PHASE 2 — WEBSITE COPY + STRUCTURE
+🏠 HOME PAGE
+Hero Section
+
+Headline (Gothic Display Font):
+
+BUILT BOLD. NO APOLOGIES.
+
+Subtext (Cream, Sans Serif):
+Custom ink that hits different. Designed. Placed. Permanent.
+
+Primary CTA (Gold Button):
+GET MARKED.
+
+Secondary CTA (Outlined Gold Button):
+VIEW THE ARTISTS
+
+Background: Full-screen black with high-contrast close-up tattoo shot (grainy, sharp lighting, heavy shadows).
+
+Section 2 — What We Are
+
+Headline:
+
+THIS IS SIN.
+
+Body:
+No trends.
+No flash-sheet copy work.
+No watered-down art.
+
+Slanging Ink Tattoo is built for clients who want work that lasts longer than hype.
+Every piece is custom. Every line intentional.
+
+CTA:
+BOOK YOUR SESSION.
+
+Section 3 — Featured Work Preview
+
+Grid (3–6 images)
+Gold badge framing
+Hover = Artist name overlay
+
+CTA:
+ENTER THE GALLERY
+
+Section 4 — The Process
+
+Submit your idea
+
+Lock your artist
+
+Pay your deposit
+
+Get marked.
+
+CTA:
+START THE PROCESS
+
+Section 5 — Final CTA Block
+
+Black background.
+Gold border.
+Large Gothic heading:
+
+READY TO WEAR IT FOR LIFE?
+
+Button:
+BOOK YOUR SESSION.
+
+👤 ARTISTS PAGE
+Top Section
+
+Headline:
+
+THE HANDS BEHIND THE WORK.
+
+Grid layout (Charcoal background cards)
+Each card:
+
+Portrait (black & white)
+
+Name (Gothic)
+
+Specialty (Cream)
+
+Button: VIEW PROFILE
+
+Individual Artist Page Structure
+
+Hero:
+
+Artist name in Gothic
+
+Tagline (example: “Blackwork & Dark Realism Specialist”)
+
+Section:
+Short bio (tight. No fluff.)
+
+Section:
+Portfolio grid (filter by style)
+
+CTA:
+BOOK WITH [ARTIST NAME]
+
+🖼 GALLERY PAGE
+Header:
+
+PROOF.
+
+Filter bar (Gold outlines):
+
+All
+
+Blackwork
+
+Realism
+
+Script
+
+Custom
+
+By Artist
+
+Grid:
+Heavy black spacing.
+No rounded corners.
+Sharp edges.
+
+Bottom:
+Embedded Instagram feed (black-framed container)
+
+🧾 SERVICES PAGE
+
+Header:
+
+WHAT WE DO.
+
+Section 1 — Style-Based
+
+Blackwork
+
+Realism
+
+Script
+
+Custom Concepts
+
+Section 2 — Size-Based
+
+Small Pieces
+
+Medium Pieces
+
+Half Sleeve
+
+Full Sleeve
+
+Clear disclaimer:
+Every piece is custom. Final pricing confirmed after consult.
+
+CTA:
+BOOK YOUR SESSION
+
+📅 BOOK A SESSION PAGE
+
+Hero:
+
+READY?
+
+Subtext:
+Lock your slot. Pay your deposit. Show up.
+
+Embedded Calendar Section:
+
+Choose Artist
+
+Select Date
+
+Select Time
+
+Pay Deposit
+
+Short form fields:
+
+Name
+
+Email
+
+Concept Description
+
+Placement
+
+Size estimate
+
+Reference upload
+
+Final CTA:
+CONFIRM & PAY DEPOSIT
+
+📞 CONTACT PAGE
+
+Minimal.
+Clean.
+No clutter.
+
+Email
+
+Phone
+
+Studio address
+
+Hours
+
+Google Map embed
+
+Headline:
+
+QUESTIONS?
+
+CTA:
+BOOK INSTEAD.
+
+🎨 STYLE & COLOR SYSTEM (PROPOSED)
+Color Usage Rules
+
+80% Black (#000000)
+
+15% Charcoal (#1A1A1A)
+
+5% Gold (#C9A227) — only for:
+
+Buttons
+
+Borders
+
+Hover states
+
+Dividers
+
+Cream (#F5E6C8):
+
+Subheadings
+
+Body text
+
+Thin outlines
+
+No gradients except:
+
+Subtle gold glow behind logo only.
+
+Typography System
+
+H1 (Hero):
+Blackletter / Cinzel — ALL CAPS
+
+H2:
+Cinzel Small Caps
+
+Body:
+Montserrat Regular
+
+Buttons:
+Montserrat Bold, letter spaced +2px
+
+UI/UX Strategy for Conversions
+
+Gold CTA repeated every scroll section
+
+Sticky top nav (transparent → solid black on scroll)
+
+Booking button persistent on mobile bottom bar
+
+Heavy image usage (emotion > explanation)
+
+Minimal copy blocks (no paragraphs longer than 4 lines)
