@@ -7,7 +7,6 @@ import { rm, readFile } from "fs/promises";
 const allowlist = [
   "@google/generative-ai",
   "axios",
-  "connect-pg-simple",
   "cors",
   "date-fns",
   "drizzle-orm",
@@ -23,7 +22,6 @@ const allowlist = [
   "openai",
   "passport",
   "passport-local",
-  "pg",
   "stripe",
   "uuid",
   "ws",
@@ -45,7 +43,7 @@ async function buildAll() {
     ...Object.keys(pkg.devDependencies || {}),
     ...Object.keys(pkg.optionalDependencies || {}),
   ];
-  // Always exclude better-sqlite3 from production builds
+  // Exclude better-sqlite3 from production bundles since it has native dependencies
   const externals = allDeps.filter((dep) => !allowlist.includes(dep) || dep === "better-sqlite3");
 
   await esbuild({
