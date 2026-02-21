@@ -44,7 +44,10 @@ async function buildAll() {
     ...Object.keys(pkg.optionalDependencies || {}),
   ];
   // Exclude better-sqlite3 from production bundles since it has native dependencies
-  const externals = allDeps.filter((dep) => !allowlist.includes(dep) || dep === "better-sqlite3");
+  const externals = allDeps.filter((dep) => !allowlist.includes(dep)).concat([
+    "better-sqlite3", 
+    "drizzle-orm/better-sqlite3"
+  ]);
 
   await esbuild({
     entryPoints: ["server/index.ts"],
@@ -58,6 +61,15 @@ async function buildAll() {
     minify: true,
     external: externals,
     logLevel: "info",
+    // Additional external patterns to catch nested imports
+    plugins: [{
+      name: 'external-better-sqlite3',
+      setup(build) {
+        build.onResolve({ filter: /better-sqlite3/ }, () => ({
+          external: true
+        }))
+      }
+    }],
   });
 }
 
