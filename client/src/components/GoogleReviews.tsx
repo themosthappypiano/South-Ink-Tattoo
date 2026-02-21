@@ -199,7 +199,7 @@ export function GoogleReviews() {
           className="text-center mt-12"
         >
           <a 
-            href="https://www.google.com/search?client=firefox-b-lm&hs=gh39&sa=X&sca_esv=951273450dcd7923&hl=en-ES&biw=1920&bih=934&sxsrf=ANbL-n7L2zoldgo_aDJFQ00DBY-gHmlFFQ:1771669964106&q=South%20Ink%20Tattoo%20Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDAwMDE0tLQwsjQxMzE1tQAyNzAyvmKUCM4vLclQ8MzLVghJLCnJz1cISi3LTC0vXsSKUwoAD9asrVEAAAA&rldimm=10004119829464558198&tbm=lcl&ved=0CAcQ5foLahcKEwjo9NT3sOqSAxUAAAAAHQAAAAAQBQ#arid=ChdDSUhNMG9nS0VJQ0FnSUM3eFk3YTZRRRAB&lkt=LocalPoiReviews" 
+            href="https://www.google.com/maps/place/South+Ink+Tattoo/@53.3225123,-6.2675323,17z/data=!4m8!3m7!1s0x48670c02c0c660ad:0x8ad5c5fb15ad2a76!8m2!3d53.3225123!4d-6.2649574!9m1!1b1!16s%2Fg%2F11bxc6lb_z?entry=ttu&g_ep=EgoyMDI2MDIxOC4wIKXMDSoASAFQAw%3D%3D" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 text-primary hover:text-white transition-all duration-300 font-bold tracking-widest uppercase bg-primary/10 hover:bg-primary/20 px-6 py-3 rounded border border-primary/30 hover:border-primary/60 hover:shadow-[0_0_20px_rgba(201,162,39,0.2)]"
