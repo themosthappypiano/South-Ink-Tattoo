@@ -29,13 +29,13 @@ export function Navbar() {
   return (
     <>
       {/* Separate Logo */}
-      <div className="fixed top-4 left-4 z-50">
+      <div className="fixed top-4 left-4 md:top-8 z-50">
         <Link href="/">
           <div className="flex cursor-pointer group">
             <img 
               src={logoImg} 
-              alt="Slanging Ink" 
-              className="h-24 w-24 md:h-32 md:w-32 object-contain filter group-hover:brightness-125 transition-all" 
+              alt="South Ink Tattoo" 
+              className="h-16 w-16 md:h-40 md:w-40 object-contain filter group-hover:brightness-125 transition-all" 
             />
           </div>
         </Link>

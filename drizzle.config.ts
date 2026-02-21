@@ -4,9 +4,13 @@ const DATABASE_URL = process.env.DATABASE_URL || "/home/errr/Documents/Builds/ta
 
 export default defineConfig({
   out: "./migrations",
-  schema: "./shared/schema.ts",
-  dialect: "sqlite",
-  dbCredentials: {
-    url: "file:dev.db",
-  },
+  schema: process.env.NODE_ENV === "production" && process.env.DATABASE_URL?.startsWith("postgres")
+    ? "./shared/schema-pg.ts"
+    : "./shared/schema.ts",
+  dialect: process.env.NODE_ENV === "production" && process.env.DATABASE_URL?.startsWith("postgres")
+    ? "postgresql"
+    : "sqlite",
+  dbCredentials: process.env.NODE_ENV === "production" && process.env.DATABASE_URL?.startsWith("postgres")
+    ? { url: process.env.DATABASE_URL }
+    : { url: "file:dev.db" },
 });

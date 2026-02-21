@@ -23,7 +23,7 @@ export default function Artists() {
     name: "ATOM",
     specialty: "All Styles - Traditional, Realism, Fine Line",
     bio: "Owner and master tattoo artist with years of experience. Specializes in custom pieces and brings your vision to life with incredible attention to detail.",
-    imageUrl: artistPlaceholder
+    imageUrl: "https://i.ibb.co/V0XZQnQp/file.jpg"
   };
 
   return (

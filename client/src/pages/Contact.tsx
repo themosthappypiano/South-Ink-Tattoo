@@ -5,8 +5,17 @@ import { MapPin, Mail, Phone, Clock } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-black pt-32 pb-24">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-black pt-32 pb-24 relative">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="https://i.ibb.co/LdM78V6f/Chat-GPT-Image-Feb-21-2026-11-33-56-AM.png" 
+          alt="Tattoo Background" 
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-black/80" />
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <SectionHeader title="Contact Us" center className="mb-20" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
@@ -26,7 +35,7 @@ export default function Contact() {
                   <Mail className="text-primary w-6 h-6 mt-1" />
                   <div>
                     <p className="text-white font-bold uppercase tracking-wide">Email</p>
-                    <p className="text-gray-400">info@southinkdublin.com</p>
+                    <p className="text-gray-400">southinktattoo@yahoo.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

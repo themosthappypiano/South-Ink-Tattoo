@@ -41,7 +41,7 @@ export default function ArtistProfile() {
         
         <div className="absolute top-24 left-4 md:left-12 z-20">
           <Link href="/artists">
-            <Button variant="link" className="text-white hover:text-primary pl-0">
+            <Button variant="ghost" className="text-white hover:text-primary pl-0">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Artists
             </Button>
           </Link>

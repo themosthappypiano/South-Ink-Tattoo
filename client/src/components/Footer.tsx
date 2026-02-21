@@ -43,7 +43,7 @@ export function Footer() {
           <p>&copy; {new Date().getFullYear()} South Ink Tattoo Dublin. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="https://www.facebook.com/southinkdublin" target="_blank" rel="noopener noreferrer" className="hover:text-primary cursor-pointer transition-colors">Facebook</a>
-            <a href="mailto:info@southinkdublin.com" className="hover:text-primary cursor-pointer transition-colors">Email</a>
+            <a href="mailto:southinktattoo@yahoo.com" className="hover:text-primary cursor-pointer transition-colors">Email</a>
           </div>
         </div>
       </div>

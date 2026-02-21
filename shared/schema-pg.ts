@@ -1,35 +1,34 @@
-import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
+import { pgTable, serial, text, integer, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
-import { sql } from "drizzle-orm";
 import { z } from "zod";
 
-export const artists = sqliteTable("artists", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
+export const artists = pgTable("artists", {
+  id: serial("id").primaryKey(),
   name: text("name").notNull(),
   specialty: text("specialty").notNull(),
   bio: text("bio").notNull(),
   imageUrl: text("image_url").notNull(),
 });
 
-export const portfolioItems = sqliteTable("portfolio_items", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
+export const portfolioItems = pgTable("portfolio_items", {
+  id: serial("id").primaryKey(),
   artistId: integer("artist_id").references(() => artists.id).notNull(),
   imageUrl: text("image_url").notNull(),
   style: text("style").notNull(),
   sizeCategory: text("size_category").notNull(),
 });
 
-export const bookings = sqliteTable("bookings", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
+export const bookings = pgTable("bookings", {
+  id: serial("id").primaryKey(),
   artistId: integer("artist_id").references(() => artists.id).notNull(),
   clientName: text("client_name").notNull(),
   clientEmail: text("client_email").notNull(),
   concept: text("concept").notNull(),
   placement: text("placement").notNull(),
   sizeEstimate: text("size_estimate").notNull(),
-  bookingDate: integer("booking_date", { mode: "timestamp" }).notNull(),
+  bookingDate: timestamp("booking_date").notNull(),
   status: text("status").notNull().default("pending"),
-  createdAt: integer("created_at", { mode: "timestamp" }).default(sql`(unixepoch())`),
+  createdAt: timestamp("created_at").defaultNow(),
 });
 
 export const insertArtistSchema = createInsertSchema(artists).omit({ id: true });

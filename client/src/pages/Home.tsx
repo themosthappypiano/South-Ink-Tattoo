@@ -60,7 +60,7 @@ export default function Home() {
                 </Link>
                 <Link href="/artists">
                   <Button variant="outline" className="h-16 px-12 text-xl text-primary border-primary hover:bg-primary hover:text-black font-bold uppercase tracking-widest rounded-none bg-transparent skew-x-[-10deg] transition-all duration-300">
-                    <span className="skew-x-[10deg]">Meet Artists</span>
+                    <span className="skew-x-[10deg]">Meet Artist</span>
                   </Button>
                 </Link>
               </motion.div>
@@ -100,7 +100,7 @@ export default function Home() {
                 subtitle="No trends. No flash-sheet copy work. No watered-down art."
               />
               <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                Slanging Ink Tattoo is built for clients who want work that lasts longer than hype. Every piece is custom. Every line intentional. We respect the craft, the history, and the skin.
+                South Ink Tattoo is built for clients who want work that lasts longer than hype. Every piece is custom. Every line intentional. We respect the craft, the history, and the skin.
               </p>
               <Link href="/book">
                 <Button className="text-primary hover:text-white p-0 h-auto font-bold tracking-widest uppercase bg-transparent hover:bg-transparent group">
@@ -132,11 +132,28 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="flex justify-center items-center h-64">
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-primary mb-4">Gallery Coming Soon</h3>
-              <p className="text-gray-400 text-lg">Until further notice</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { src: work1, alt: "Traditional Tattoo Work" },
+              { src: work2, alt: "Custom Design" },
+              { src: work3, alt: "Artistic Piece" }
+            ].map((image, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="group relative aspect-square overflow-hidden"
+              >
+                <img 
+                  src={image.src} 
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+              </motion.div>
+            ))}
           </div>
 
           <div className="mt-12 text-center md:hidden">
